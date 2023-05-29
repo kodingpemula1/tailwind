@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    
+</head>
+<body>
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div class="relative flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+              <a href="#" class="flex items-center space-x-2">
+                <img class="h-8 w-auto" src="logo.png" alt="Logo">
+                <span class="text-white font-bold text-lg">My Website</span>
+              </a>
+            </div>
+      
+            <!-- Menu -->
+            <div class="flex">
+              <ul class="flex space-x-4">
+                <li>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                </li>
+                <li class="relative">
+                  <button class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium focus:outline-none">
+                    Dropdown
+                  </button>
+                  <div class="absolute hidden bg-gray-800 text-white py-2 w-32 rounded-md shadow-lg">
+                    <a href="#" class="block px-4 py-2 text-sm">Submenu 1</a>
+                    <a href="#" class="block px-4 py-2 text-sm">Submenu 2</a>
+                    <a href="#" class="block px-4 py-2 text-sm">Submenu 3</a>
+                  </div>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <script>
+        // Mengaktifkan dropdown saat tombol di klik
+        const dropdownButton = document.querySelector('.relative button');
+        const dropdownMenu = document.querySelector('.relative .absolute');
+      
+        dropdownButton.addEventListener('click', () => {
+          dropdownMenu.classList.toggle('hidden');
+        });
+      </script>
+      
+</body>
+</html>
